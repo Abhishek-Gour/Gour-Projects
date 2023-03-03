@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* header */
+.main_header {
+    padding: 0 4.8rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+.main_header .logo {
+    height: 3.3rem;
+    width: 3.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.navBarList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 4.2rem;
+}
+
+.navBarLinks:link,.navBarLinks:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    transition: all 0.3s;
+}
+
+
+.navBarLinks:hover , .navBarLinks:active {
+    color: #364fc7;
+    /* background-color: #212529; */
+}
+
+.hero {
+    height: 50%;
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services {
+    height: 50%;
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sHero p , .sServices p {
+    font-size: 3.2rem;
+    color: black
+}
+
+/* mobile icon */
+.mobileNavBarButton {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mobileNavIcon {
+    width: 4rem;
+    height: 4rem;
+    color: #212529;
+}
+
+.mobileNavIcon[name="close-outline"] {
+    display: none;
+}
+
+/* Responsive work */
+/* 1. 980px  */
+@media (max-width:62em) {
+    .main_header {
+        position: relative;
+    }
+        .mobileNavBarButton {
+            display: block;
+            z-index: 999;
+            border: 3px solid #212529;
+        }
+        
+        .navBar {
+            /* display: none; */
+            width: 100%;
+            height: 100vh;
+            background-color: #e7f5ff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* apply Transition */
+
+            transform: translateX(100%);
+            transition: all 0.5s linear;
+
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .navBarList {
+            flex-direction: column;
+        }
+        .active .navBar {
+            transform:  translateX(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .active .mobileNavBarButton .mobileNavIcon[name="close-outline"]{
+            display: block;
+        }
+        .active .mobileNavBarButton .mobileNavIcon[name="menu-outline"]{
+            display: none;
+        }
+    }
+
+    /* below 560px */
+    @media (max-width:35em) {
+        .header {
+            padding: 0 2.4rem;
+        }        
+        .header .logo {
+            width: 60%;
+        }
+    }
