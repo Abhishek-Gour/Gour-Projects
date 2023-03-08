@@ -1,0 +1,142 @@
+/* Ubuntu Varela sanserif fonts add */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@400;700&family=Varela+Round&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu',sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+/* nav */
+nav img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2.1rem;
+    gap: 20px;
+}
+nav {
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    line-height: 50px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+/* container class */
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    min-height: 80vh;
+    display: flex;
+    margin: 2.3rem auto;
+    width: 70%;
+    background-image: url(/spotifyClone/assets/spotify_container_bac.jpg);
+    color: white;
+    margin: 1.2rem 0;
+    border-radius: 1.4rem;
+    padding: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+/* song item */
+.songItem {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 1.2rem 0;
+    color: black;
+    /* width: 80%; */
+    border-radius: 3.3rem;
+}
+
+.songItemContainer {
+    margin-top: 7.4rem;
+
+}
+
+.songItem img {
+    width: 44px;
+    margin: 0 23px;
+    border-radius: 50%;
+}
+
+.timesStamp {
+    margin: 0 23px;
+}
+.fontIcon {
+    cursor: pointer;
+}
+/* bottom class */
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    height: 8rem;
+    bottom: 0;
+    color: white;
+    background-color: black;
+}
+.icons {
+    margin-top: 1.4rem;
+    width: 10rem;
+}
+
+.icons .iconPause  {
+    display: none;
+}
+
+.icons i {
+    height: auto;
+    width: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+#myProgressBar {
+    text-align: center;
+    cursor: pointer;
+    width: 80vw;
+}
+
+/* song Info */
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+}
+.songInfo img{
+   opacity: 0;
+   transition: opacity 0.3s ease-in;
+}
+
