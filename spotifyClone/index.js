@@ -30,7 +30,7 @@ masterPlay.addEventListener('click', () => {
         audioElement.play();
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-pause')
-    }else {
+    } else {
         audioElement.pause();
         masterPlay.classList.remove('fa-pause');
         masterPlay.classList.add('fa-circle-play')

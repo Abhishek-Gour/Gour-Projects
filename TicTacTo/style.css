@@ -1,0 +1,29 @@
+:root {
+    --dark-gray: #1a2a32;
+    --gray:#2e4756;
+    --turquoise:#3cc4bf;
+    --yellow: #f2b147;
+    --light-gray:#d3d3b3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Motserrat',sans-serif;
+    border: none;
+}
+html,body {
+    height: 100%;
+    background-color: var(--dark-gray);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: 50px repeat(3,80px) 60px;
+}
+.grid div {
+    background-color: var(--gray);
+    margin: 10px;
+}
